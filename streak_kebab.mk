@@ -21,24 +21,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kebab device
 $(call inherit-product, device/oneplus/kebab/device.mk)
 
-# Inherit some common Palladium-OS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ProjectStreak stuff.
+$(call inherit-product, vendor/streak/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# ProjectStreak stuff
+STREAK_BUILD_TYPE=OFFICIAL
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_kebab
+PRODUCT_NAME := streak_kebab
 PRODUCT_DEVICE := kebab
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := KB2003
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=OnePlus8T \
-    PRODUCT_NAME=OnePlus8T \
-    PRIVATE_BUILD_DESC="coral-user 11 RQ3A.210905.001 7511028 release-keys"
-
-BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.211001.001/7641976:user/release-keys

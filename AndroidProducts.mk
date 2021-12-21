@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_kebab.mk
+    $(LOCAL_DIR)/streak_kebab.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_kebab-user \
-    aosp_kebab-userdebug \
-    aosp_kebab-eng
+    streak_kebab-user \
+    streak_kebab-userdebug \
+    streak_kebab-eng
